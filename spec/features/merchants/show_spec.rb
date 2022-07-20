@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-describe 'Merchant API Show page' do
-    it 'lists the items of each merchant' do
+describe 'Merchant API Show page', :vcr do
+    it 'lists the items of each merchant', :vcr do
         visit '/merchants/1'
 
         expect(page).to have_content("Schroeder-Jerde Merchant Page")
